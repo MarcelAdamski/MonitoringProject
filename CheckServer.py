@@ -6,8 +6,6 @@ import pickle #allows to propagate data from run to run with program
 import subprocess
 import platform #whether running on win/unix system
 
-print("Good to go")
-
 class Server():
     def __init__(self, name, port, connection_type, priority):
         self.name = name
