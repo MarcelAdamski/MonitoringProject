@@ -2,7 +2,7 @@ import pickle
 from CheckServer import Server
 import time
 
-def AddServer(servers):
+def add_server(servers):
     while True:
         print("Started adding new server to monitorize")
         name = input("Server name: ")
@@ -28,10 +28,10 @@ def AddServer(servers):
 if __name__ == "__main__":
     try:
         servers = list(pickle.load(open("servers.pickle", "rb")))
-        AddServer(servers)
+        add_server(servers)
     except FileNotFoundError:
         print("Pickle file not found. Created one.")
         servers = []
-        AddServer(servers)
+        add_server(servers)
     except Exception as e:
         print(e)
